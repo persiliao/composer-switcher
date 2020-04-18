@@ -28,6 +28,7 @@ Options
 ```sh
 # switch composer mirror repository to aliyun
 composer-switcher -m aliyun
+
 # switch composer mirror repository to tencent
 composer-switcher --mirror tencent
 ```
@@ -36,6 +37,7 @@ composer-switcher --mirror tencent
 
 ```sh
 composer-switcher -c
+
 composer-switcher --cancel
 ```
 
@@ -44,6 +46,7 @@ composer-switcher --cancel
 ```sh
 # switch composer global mirror repository to aliyun
 composer-switcher -g -m aliyun
+
 # switch composer global mirror repository to packagist
 composer-switcher -g -c
 ```
@@ -53,5 +56,5 @@ License
 
 MIT
 
-[Homebrew]:http://brew.sh/
-[@PersiLiao]:http://twitter.com/PersiLiao
+[Homebrew](http://brew.sh/)
+[@PersiLiao](http://twitter.com/PersiLiao)
