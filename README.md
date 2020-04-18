@@ -32,28 +32,28 @@ Options
 
 ```sh
 # switch composer mirror repository to aliyun
-composer-switcher -m aliyun
+$ composer-switcher -m aliyun
 
 # switch composer mirror repository to tencent
-composer-switcher --mirror tencent
+$ composer-switcher --mirror tencent
 ```
 
 - -c|--cancel switch composer global mirror repository to packagist
 
 ```sh
-composer-switcher -c
+$ composer-switcher -c
 
-composer-switcher --cancel
+$ composer-switcher --cancel
 ```
 
 - -g|--global composer config global setting
 
 ```sh
 # switch composer global mirror repository to aliyun
-composer-switcher -g -m aliyun
+$ composer-switcher -g -m aliyun
 
 # switch composer global mirror repository to packagist
-composer-switcher -g -c
+$ composer-switcher -g -c
 ```
 
 License
