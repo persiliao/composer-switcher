@@ -12,8 +12,8 @@ Installation
 >macOs
 
 ```sh
-#  brew under macos
-brew install composer-switcher
+# brew under macos
+$ brew install composer-switcher
 ```
 
 >Linux
