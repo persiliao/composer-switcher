@@ -1,4 +1,4 @@
-Composer Mirror Switcher
+Composer Mirror Repository Switcher
 =========
 
 Version
