@@ -1,4 +1,4 @@
-Composer Mirror Switcher [![Build Status](https://travis-ci.org/persiliao/composer-switcher.svg?branch=master)](https://travis-ci.org/persiliao/composer-switcher)
+Composer Mirror Switcher
 =========
 
 Version
