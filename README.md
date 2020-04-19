@@ -48,7 +48,7 @@ $ composer-switcher -g -m aliyun
 $ composer-switcher -g -c
 ```
 
-Mirror repository Supported
+Mirror repository supported
 ----------------------------------
 
 |Name|Url|Location|
