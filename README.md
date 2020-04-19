@@ -56,6 +56,24 @@ $ composer-switcher -g -m aliyun
 $ composer-switcher -g -c
 ```
 
+Mirror repository Supported
+----------------------------------
+
+|Name|Url|Location|
+|:---|:-----|:-----|
+|aliyun|https://mirrors.aliyun.com/composer/|China|
+|tencent|https://mirrors.cloud.tencent.com/composer/|China|
+|sjtug|https://packagist.mirrors.sjtug.sjtu.edu.cn|China|
+|cnpkg|https://php.cnpkg.org|China|
+|japan|https://packagist.jp|Japan|
+|india|https://packagist.in|India|
+|indonesia|https://packagist.phpindonesia.id|Indonesia|
+|southafrica|https://packagist.co.za|South Africa|
+|brazil|https://packagist.com.br|Brazil|
+|korea|https://packagist.kr|Korea|
+|thailand|https://packagist.mycools.in.th|Thailand|`
+|usa|https://packagist-mirror.wmflabs.org|USA|
+
 License
 ----
 
