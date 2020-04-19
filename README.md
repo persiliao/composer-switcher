@@ -9,8 +9,9 @@ Version
 Installation
 --------------
 
-```sh
-# through source code compilation and installation
+```bash
+# through source code compilation and installation:
+$ cd 
 $ wget -O composer-switcher-lastest.tgz https://github.com/persiliao/composer-switcher/archive/v0.1.0.tar.gz
 $ tar -zxvf composer-switcher-lastest.tgz
 $ ln -s ~/composer-switcher-lastest/composerswitcher.sh /usr/local/bin/composer-switcher
@@ -21,7 +22,7 @@ Options
 
 - -m|--mirror switch composer mirror 
 
-```sh
+```bash
 # switch composer mirror repository to aliyun
 $ composer-switcher -m aliyun
 
