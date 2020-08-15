@@ -1,10 +1,5 @@
-Composer Mirror Repository Switcher
+PHP Composer mirror repository switcher
 =========
-
-Version
-----
-
-0.1.0
 
 Installation
 --------------
