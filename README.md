@@ -1,6 +1,11 @@
 PHP Composer mirror repository switcher
 =========
 
+Require
+--------------
+
+PHP Composer [composer](https://getcomposer.org/)
+
 Installation
 --------------
 
