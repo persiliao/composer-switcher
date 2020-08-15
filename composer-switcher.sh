@@ -3,12 +3,12 @@
 # Email: persiliao@sixsir.com
 # Twitter: @PersiLiao
 
-mirror_array=("aliyun" "tencent" "sjtug" "cnpkg" "japan" "india" "indonesia" "southafrica" "brazil" "korea" "thailand" "usa")
+mirrorArray=("aliyun" "tencent" "sjtug" "cnpkg" "japan" "india" "indonesia" "southafrica" "brazil" "korea" "thailand" "usa")
 
-function showComposerSwitcherHelp(){
+function displayComposerSwitcherHelp(){
     echo "usage: composer-switcher [ -m | --mirror ] [ -g | --global ] [ -c | --cancel ]"
     echo
-    echo "    list            one of:" ${mirror_array[@]}
+    echo "    list            one of:" ${mirrorArray[@]}
     echo "    -s|--show       composer show mirror "
     echo "    -g|--global     composer global mirror"
     echo "    -m|--mirror     composer switch mirror"
@@ -16,11 +16,11 @@ function showComposerSwitcherHelp(){
     echo
 }
 
-mirror_url_array=("https://mirrors.aliyun.com/composer/" "https://mirrors.cloud.tencent.com/composer/" 
+mirrorUrlArray=("https://mirrors.aliyun.com/composer/" "https://mirrors.cloud.tencent.com/composer/" 
     "https://packagist.mirrors.sjtug.sjtu.edu.cn" "https://php.cnpkg.org" "https://packagist.jp" "https://packagist.in" "https://packagist.phpindonesia.id" "https://packagist.co.za" "https://packagist.com.br" "https://packagist.kr" "https://packagist.mycools.in.th" "https://packagist-mirror.wmflabs.org")
 
 if [[ -z "$1" ]]; then
-    showComposerSwitcherHelp
+    displayComposerSwitcherHelp
     exit
 fi
 
@@ -52,13 +52,11 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [[ -n $composerShow ]]; then
-    
     echo -e "\033[32m"`composer config $composerGlobal repos.packagist.org`"\033[0m\n"
     exit
 fi
 
 if [[ -z $composerMirror ]] && [[ -z $composerGlobal ]] && [[ -z $composerCancel ]]; then
-    echo -e "\033[1;31m${POSITIONAL[@]} not supported !\033[0m\n"
     showComposerSwitcherHelp
     exit
 fi
@@ -72,10 +70,10 @@ fi
 if [[ -n $composerMirror ]]; then
     composerMirrorUrl=
 
-    for i in "${!mirror_array[@]}";   
+    for i in "${!mirrorArray[@]}";   
     do   
-        if [[ ${mirror_array[$i]} == $composerMirror ]]; then
-            composerMirrorUrl=${mirror_url_array[$i]}
+        if [[ ${mirrorArray[$i]} == $composerMirror ]]; then
+            composerMirrorUrl=${mirrorUrlArray[$i]}
         fi
     done
 
@@ -84,7 +82,9 @@ if [[ -n $composerMirror ]]; then
         exit
     else
         composer config $composerGlobal repos.packagist composer $composerMirrorUrl
-        echo -e "\033[32mComposer mirror source has been successfully switched to ${composerMirror}, ${composerMirrorUrl}\033[0m\n"
+        if [ $? == 0 ]; then
+            echo -e "\033[32mComposer mirror source has been successfully switched to ${composerMirror}, ${composerMirrorUrl}\033[0m\n"
+        fi
     fi
 fi
 
