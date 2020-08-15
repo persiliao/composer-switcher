@@ -9,28 +9,39 @@ Version
 Installation
 --------------
 
-```bash
-# through source code compilation and installation:
-$ cd 
-$ wget -O composer-switcher-lastest.tgz https://github.com/persiliao/composer-switcher/archive/v0.1.0.tar.gz
-$ tar -zxvf composer-switcher-lastest.tgz
-$ ln -s ~/composer-switcher-lastest/composerswitcher.sh /usr/local/bin/composer-switcher
+```sh
+$ git clone https://github.com/persiliao/composer-switcher
+$ cd composer-switcher
+$ ./install_composer_switcher.sh
 ```
 
 Options
 --------------
 
+- -s|--show show composer current repository mirror 
+
+
+```sh
+# show composer mirror repository to aliyun
+$ composer-switcher -s
+
+# show composer global mirror repository to aliyun
+$ composer-switcher -g -s
+```
+
 - -m|--mirror switch composer mirror 
 
-```bash
+
+```sh
 # switch composer mirror repository to aliyun
 $ composer-switcher -m aliyun
 
-# switch composer mirror repository to tencent
-$ composer-switcher --mirror tencent
+# switch composer mirror repository to aliyun
+$ composer-switcher --mirror aliyun
 ```
 
-- -c|--cancel switch composer global mirror repository to packagist
+- -c|--cancel cancel composer global mirror repository to packagist
+
 
 ```sh
 $ composer-switcher -c
@@ -40,11 +51,12 @@ $ composer-switcher --cancel
 
 - -g|--global composer config global setting
 
+
 ```sh
 # switch composer global mirror repository to aliyun
 $ composer-switcher -g -m aliyun
 
-# switch composer global mirror repository to packagist
+# cancel composer global mirror repository to packagist
 $ composer-switcher -g -c
 ```
 
