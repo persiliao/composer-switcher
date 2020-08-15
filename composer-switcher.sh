@@ -2,6 +2,7 @@
 # Creator: Persi Liao
 # Email: persiliao@sixsir.com
 # Twitter: @PersiLiao
+# Homepage: https://www.github.com/persiliao
 
 mirrorArray=("aliyun" "tencent" "sjtug" "cnpkg" "japan" "india" "indonesia" "southafrica" "brazil" "korea" "thailand" "usa")
 
@@ -9,7 +10,7 @@ function displayComposerSwitcherHelp(){
     echo "usage: composer-switcher [ -m | --mirror ] [ -g | --global ] [ -c | --cancel ]"
     echo
     echo "    list            one of:" ${mirrorArray[@]}
-    echo "    -s|--show       composer show mirror "
+    echo "    -s|--show       display composer current mirror "
     echo "    -g|--global     composer global mirror"
     echo "    -m|--mirror     composer switch mirror"
     echo "    -c|--cancel     unset packagist mirror"
@@ -57,7 +58,7 @@ if [[ -n $composerShow ]]; then
 fi
 
 if [[ -z $composerMirror ]] && [[ -z $composerGlobal ]] && [[ -z $composerCancel ]]; then
-    showComposerSwitcherHelp
+    displayComposerSwitcherHelp
     exit
 fi
 

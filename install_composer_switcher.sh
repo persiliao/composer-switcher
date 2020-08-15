@@ -5,8 +5,32 @@ workDirectory=$(dirname "$0")
 pushd ${workDirectory} > /dev/null
 workDirectory=$(pwd)
 
-cp "${workDirectory}/composer-switcher.sh" "/usr/local/bin/composer-switcher"
-chmod +x "/usr/local/bin/composer-switcher"
+_installLocal(){
+    if [[ -d "${HOME}/bin" ]]; then
+        cp "${workDirectory}/composer-switcher.sh" "${HOME}/bin/composer-switcher"
+    else
+        mkdir "${HOME}/bin"
+        cp "${workDirectory}/composer-switcher.sh" "${HOME}/bin/composer-switcher"
+    fi
+    chmod +x "${HOME}/bin/composer-switcher"
+}
+
+if [[ $# -gt 0 ]]; then
+    arg="$1"
+    if [[ $arg == "-g" ]]; then
+        if [[ -d "/usr/local/bin" ]]; then
+        cp "${workDirectory}/composer-switcher.sh" "/usr/local/bin/composer-switcher"
+        else
+            mkdir "/usr/local/bin"
+            cp "${workDirectory}/composer-switcher.sh" "/usr/local/bin/composer-switcher"
+        fi
+        chmod +x "/usr/local/bin/composer-switcher"
+    else
+        _installLocal
+    fi
+else
+    _installLocal
+fi
 
 if [ $? == 0 ]; then
     if [ `uname` == "Darwin" ]; then
