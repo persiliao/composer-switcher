@@ -81,7 +81,6 @@ Mirror repository supported
 License
 ----
 
-MIT
+MIT License
 
-[Homebrew](http://brew.sh/)
 [@PersiLiao](http://twitter.com/PersiLiao)
