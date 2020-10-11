@@ -12,7 +12,7 @@ Installation
 ```sh
 $ git clone https://github.com/persiliao/composer-switcher
 $ cd composer-switcher
-# -g Install to all users to /usr/local/bin/composer-switcher
+# -g Install to all users to /usr/local/bin/composer-switcher 
 # default ~/bin/composer-switcher
 $ ./install_composer_switcher.sh [-g] 
 ```
