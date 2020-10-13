@@ -4,7 +4,7 @@
 # Twitter: @PersiLiao
 # Homepage: https://www.github.com/persiliao
 
-mirrorArray=("aliyun" "tencent" "sjtug" "cnpkg" "japan" "india" "indonesia" "southafrica" "brazil" "korea" "thailand" "usa")
+mirrorArray=("lz66" "aliyun" "tencent" "sjtug" "cnpkg" "japan" "india" "indonesia" "southafrica" "brazil" "korea" "thailand" "usa")
 
 function displayComposerSwitcherHelp(){
     echo "usage: composer-switcher [ -m | --mirror ] [ -g | --global ] [ -c | --cancel ]"
@@ -17,7 +17,7 @@ function displayComposerSwitcherHelp(){
     echo
 }
 
-mirrorUrlArray=("https://mirrors.aliyun.com/composer/" "https://mirrors.cloud.tencent.com/composer/" 
+mirrorUrlArray=("https://packagist.lz66.net" "https://mirrors.aliyun.com/composer/" "https://mirrors.cloud.tencent.com/composer/" 
     "https://packagist.mirrors.sjtug.sjtu.edu.cn" "https://php.cnpkg.org" "https://packagist.jp" "https://packagist.in" "https://packagist.phpindonesia.id" "https://packagist.co.za" "https://packagist.com.br" "https://packagist.kr" "https://packagist.mycools.in.th" "https://packagist-mirror.wmflabs.org")
 
 if [[ -z "$1" ]]; then
